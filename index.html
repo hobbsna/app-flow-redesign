@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit = no">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <title>App Flow Redesign | GroupMe</title>
+    <meta name="description" content="A case study of a redesign of the app GroupMe, including user research, design question, pain points, ideation, wireframes, and visual design">
+    <meta name="author" content="Nathan Hobbs">
+
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <!--Header-->
+    <div class="bg-white">
+        <h1 class="m-4 text-center"><a href="https://groupme.com/en-US/" target="_blank"><img src="images/GroupMeLogo.png" alt="GroupMe"></a> | A UX Case Study</h1>
+        <section class="flex-container m-4" id="profile">
+            <img src="images/NathanProfilePic.gif" alt="Nathan Hobbs" class="profile img-fluid">
+            <p class="lead pl-4">Nathan Hobbs <br> September 6, 2020</p>
+        </section>
+    </div>
+    
+    <!--Nav-->
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" href="#overview">Overview</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#users">User Needs and Preferences</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#problem">The Problem</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#solution">The Solution</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#conclusion">Conclusion</a>
+        </li>
+    </ul>
+
+    <!--Overview-->
+    <section class="m-4" id="overview">
+        <h2>Overview</h2>
+        <p>GroupMe is a mobile group messaging app owned by Microsoft. It was launched in May 2010 by the private company GroupMe. In 2013, GroupMe had over 12 million registered users.</p>
+    </section>
+
+    <!--User needs and preferences-->
+    <section class="bg-light" id="users">
+        <h2 class="m-4">User Needs and Preferences</h2>
+        <div class="flex-container">
+            <figure class="m-4">
+                <img src="images/GroupMeUsageStatistics.PNG" alt="GroupMe usage statistics" class="img-fluid">
+                <figcaption>GroupMe is used by a wide variety of people and for many reasons.</figcaption>
+            </figure>
+            <figure class="m-4">
+                <img src="images/MessagingAppsData.PNG" alt="Messaging apps data" class="img-fluid">
+                <figcaption>The layout of information is extremely important to most people.</figcaption>
+            </figure>
+            <figure class="m-4">
+                <img src="images/ReasonPeopleUseGroupMeStatistics.PNG" alt="Ways people use GroupMe" class="img-fluid">
+                <figcaption>GroupMe serves users who seek to build relationships and connect with others.</figcaption>
+            </figure>
+            <figure class="m-4">
+                <img src="images/GroupMeFeatures.PNG" alt="GroupMe feature usage by person" class="img-fluid">
+                <figcaption>GroupMe does a good job of keeping secondary features in the background.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!--Problem-->
+    <section class="m-4" id="problem">
+        <h2>The Problem</h2>
+        <p>While GroupMe works for well for cross-platform communications and scheduling events, there are some frustrations with certain components of the system.
+        The following "pain points" were created as a response to data collected from users, and serve as a response to three of the most common user complaints.</p>
+        
+        <h3>Pain Point 1: No ability to sort messages</h3>
+        <p>GroupMe Messages are always displayed in order of recency. Unlike in many apps, 
+            there is no way to keep favorites at the top, or hide muted groups. App users want to feel like they are in control, and frequently 
+            become frustrated when their choices are restricted. Giving users options is essential for companies that want to stay relevant. 
+            Where there are no options there is generally no business.  </p>
+  
+        <h3>Pain Point 2: Group chat logistics </h3>
+        <p>Adding new people to a group is overly complicated and requires sifting through several menus. 
+            Since chats are by far the most popular feature in GroupMe, these should be the easiest to navigate. 
+            It makes sense that some of the secondary features are harder to reach. However, work could be done to 
+            reduce the time it takes to add someone to a group. Group chats are supposed to be what GroupMe excels at, 
+            and yet they continue to be far more complicated than they should.</p>
+        
+        <h3>Pain Point 3: App feels outdated</h3>
+        <p>The app hasn't kept up with recent design trends. Sure, it's generally pretty user friendly, but it fails to "wow" users with its visual appearance.
+        Part of that has to do with the fact that it's rather blocky - lots of hardline edges and list items laid out with hardly any interesting formatting. It
+        feels a little bit like a generic, run-of-the-mill messaging app, and not a flagship, industry-standard communication tool.</p>
+
+        <blockquote class="blockquote text-center">
+            <p class="mb-0">"The app looks and feels a bit old. Maybe it can be updated to look cleaner and function smoother!"</p>
+            <footer class="blockquote-footer">GroupMe user</footer>
+        </blockquote>
+
+        <blockquote class="blockquote text-center">
+            <p class="mb-0">"It’s boring!"</p>
+            <footer class="blockquote-footer">Another GroupMe user</footer>
+        </blockquote>
+
+        <p class="lead"><em>Design Question:</em> How might we improve the experience of GroupMe users as they navigate and manage their conversations?</p>
+    </section>
+
+    <!-- Solution-->
+    <section class="bg-light" id="solution">
+        <h2 class="m-4 pt-4">The Solution</h2>
+        <p class="m-4">By reducing the number of steps to add a new person to a group, we can simpify the user experience and keep users more likely to remain loyal to GroupMe.
+        In the process, we will solve pain point #2 by removing a layer of navigation. I chose to provide a solution for this particular pain point becuase it would make the 
+        biggest difference to users with the lowest learning curve. A new interface, as provided by fixing pain points 1 or 3, would undoubtedly benefit users, but would require them 
+        to completely relearn the system.</p>
+
+        <!--User Flows-->
+        <h3 class="m-4 text-center">User Flows</h3>
+        <h4 class="text-center">Old Way | New Way</h4>
+        <div class="flex-container">
+            <figure>
+                <img src="images/AddMembers-OldWay.png" alt="Original way to add new members" class="img-fluid">
+            </figure>
+            <figure>
+                <img src="images/AddMembers-NewWay.png" alt="New way to add new members" class="img-fluid">
+            </figure>
+        </div>
+
+        <!--Before Screenshots-->
+        <h3 class="m-4 text-center">"Before" Screenshots</h3>
+        <div class="flex-container">
+            <figure class="m-4">
+                <img src="images/GroupMeHomeSmall.png" alt="Current GroupMe home page" class="before img-fluid">
+                <figcaption>Current GroupMe home page</figcaption>
+            </figure>
+            <figure class="m-4">
+                <img src="images/GroupMeGroupSingleChatSmall.png" alt="Inside a group chat" class="before img-fluid">
+                <figcaption>Inside a group chat</figcaption>
+            </figure>
+            <figure class="m-4">
+                <img src="images/GroupMeSingleGroupChatOptionsSmall.png" alt="Options within a single group chat in GroupMe" class="before img-fluid">
+                <figcaption>Options within a single group chat</figcaption>
+            </figure>
+            <figure class="m-4">
+                <img src="images/GroupMeAddMembersScreenSmall.png" alt="GroupMe add members screen" class="before img-fluid">
+                <figcaption>GroupMe add members screen</figcaption>
+            </figure>
+        </div>
+
+        <!--Wireframes-->
+        <h3 class="m-4 text-center">Wireframes</h3>
+        <div class="flex-container">
+            <figure class="mr-4">
+                <img src="images/HomeScreenWireframe.png" alt="GroupMe home screen wireframe" class="img-fluid">
+                <figcaption>GroupMe home screen</figcaption>
+            </figure>
+            <figure class="mr-4">
+                <img src="images/GroupOptionsWireframe.png" alt="GroupMe options wireframe" class="img-fluid">
+                <figcaption>Options for a single chat</figcaption>
+            </figure>
+            <figure>
+                <img src="images/AddMembersWireframe.png" alt="GroupMe add members screen wireframe" class="img-fluid">
+                <figcaption>Add members screen </figcaption>
+            </figure>
+        </div>
+
+        <!--Mockups-->
+        <h3 class="m-4 text-center">Mockups</h3>
+        <div class="flex-container">
+            <figure class="mr-4">
+                <img src="images/HomeScreenMockup.png" alt="GroupMe home screen mockup" class="img-fluid">
+                <figcaption>GroupMe home screen</figcaption>
+            </figure>
+            <figure class="mr-4">
+                <img src="images/GroupOptionsMockup.png" alt="GroupMe options mockup" class="img-fluid">
+                <figcaption>Options for a single chat</figcaption>
+            </figure>
+            <figure>
+                <img src="images/AddMembersMockup.png" alt="GroupMe add members screen wireframe" class="img-fluid">
+                <figcaption>Add members screen</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!--Conclusion-->
+    <section class="m-4" id="conclusion">
+        <h2>Conclusion</h2>
+        <p>GroupMe is a powerful app with a lot of functionality in a compact space. By refining the add members feature, we are able to further simplify and streamline the user experience. In the future, I would love to have more time dedicated to research, as there is a lot to learn from other users. I feel that a lot more that could be covered, given enough time and resources.</p>
+    </section>
+    <!--Link to profile mockup picture source. Intentionally not an active hyperlink-->
+    <!--<a href="https://www.freepik.com/vectors/business">Business vector created by studiogstock - www.freepik.com</a>-->
+    
+</body></html>

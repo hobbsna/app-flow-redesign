@@ -1,0 +1,21 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+.profile {
+    height: 96px;
+    width: 96px;
+}
+
+.before {
+    height: 100%;
+    width: 100%;
+}
